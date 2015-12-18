@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Platform</string>
+
+    <string name="tip">提示</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+
+    <string name="login_ing">正在登录&#8230;</string>
+    <string name="auth_error">很抱歉，授权出错！</string>
+    <string name="auth_cancel">您取消了授权？</string>
+    <string name="auth_exception">很抱歉，授权异常</string>
+    <string name="login_failed">登录失败，请重新登录</string>
+    <string name="login_success">登录成功</string>
+</resources>
