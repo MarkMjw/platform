@@ -34,7 +34,7 @@ import cn.markmjw.platform.util.ImageUtil;
  * Wechat helper.
  *
  * @author markmjw
- * @date 2014-09-28
+ * @since 2014-09-28
  */
 public class WechatHelper {
     public static final int TYPE_WECHAT_FRIEND = 0;

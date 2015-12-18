@@ -31,7 +31,7 @@ import java.util.Date;
  * Gson util.
  *
  * @author markmjw
- * @date 2015-08-16
+ * @since 2015-08-16
  */
 public final class GsonUtil {
     private static Gson gson;

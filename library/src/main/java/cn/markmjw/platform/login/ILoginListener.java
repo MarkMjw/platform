@@ -20,7 +20,7 @@ package cn.markmjw.platform.login;
  * The login status listener.
  *
  * @author markmjw
- * @date 2015-04-07
+ * @since 2015-04-07
  */
 public interface ILoginListener {
     /** Success. */

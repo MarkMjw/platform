@@ -38,7 +38,7 @@ import cn.markmjw.platform.util.ImageUtil;
  * Weibo helper.
  *
  * @author markmjw
- * @date 2015-03-05
+ * @since 2015-03-05
  */
 public class WeiboHelper {
     private static WeiboHelper sInstance;
@@ -85,8 +85,6 @@ public class WeiboHelper {
 
     /**
      * 第三方应用发送请求消息到微博，唤起微博分享界面。
-     * 注意：当 {@link IWeiboShareAPI#getWeiboAppSupportAPI()} >= 10351
-     * 时，支持同时分享多条消息， 同时可以分享文本、图片以及其它媒体资源（网页、音乐、视频、声音中的一种）。
      *
      * @param activity
      * @param text      文本
@@ -114,8 +112,6 @@ public class WeiboHelper {
 
     /**
      * 第三方应用发送请求消息到微博，唤起微博分享界面。
-     * 注意：当 {@link IWeiboShareAPI#getWeiboAppSupportAPI()} >= 10351
-     * 时，支持同时分享多条消息， 同时可以分享文本、图片以及其它媒体资源（网页、音乐、视频、声音中的一种）。
      *
      * @param activity
      * @param title

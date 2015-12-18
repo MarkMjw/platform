@@ -23,7 +23,7 @@ import android.os.Parcelable;
  * The wechat authorize result entity.
  *
  * @author markmjw
- * @date 2015-04-21
+ * @since 2015-04-21
  */
 class WechatLoginResult implements Parcelable {
     String accessToken;

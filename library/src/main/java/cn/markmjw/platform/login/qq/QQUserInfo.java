@@ -23,7 +23,7 @@ import android.os.Parcelable;
  * The qq user entity.
  *
  * @author markmjw
- * @date 2015-08-16
+ * @since 2015-08-16
  */
 public class QQUserInfo implements Parcelable {
     public String is_yellow_year_vip;

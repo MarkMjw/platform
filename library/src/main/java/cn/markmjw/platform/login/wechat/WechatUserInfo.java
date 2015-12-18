@@ -25,7 +25,7 @@ import java.util.List;
  * The wechat user entity.
  *
  * @author markmjw
- * @date 2015-04-21
+ * @since 2015-04-21
  */
 public class WechatUserInfo implements Parcelable {
     public String openid;

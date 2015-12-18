@@ -26,7 +26,7 @@ import java.util.Locale;
  * The abstract login handler.
  *
  * @author markmjw
- * @date 2015-04-08
+ * @since 2015-04-08
  */
 public abstract class BaseLoginHandler {
     protected static final String TAG = "LoginHandler";

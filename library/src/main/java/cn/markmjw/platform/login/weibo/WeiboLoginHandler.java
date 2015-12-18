@@ -43,7 +43,7 @@ import cn.markmjw.platform.util.HttpUtil;
  * Weibo login handler.
  *
  * @author markmjw
- * @date 2014-03-27
+ * @since 2014-03-27
  */
 public class WeiboLoginHandler extends BaseLoginHandler {
     /** weibo api. */

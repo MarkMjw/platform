@@ -29,7 +29,7 @@ import java.io.File;
  * Image util.
  *
  * @author markmjw
- * @date 2015-08-16
+ * @since 2015-08-16
  */
 public class ImageUtil {
     private static final String TAG = "ImageUtil";

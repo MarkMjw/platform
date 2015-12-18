@@ -23,7 +23,7 @@ import android.os.Parcelable;
  * The common authorize result entity.
  *
  * @author markmjw
- * @date 2015-05-05
+ * @since 2015-05-05
  */
 public class AuthResult implements Parcelable {
     /** unlogin */

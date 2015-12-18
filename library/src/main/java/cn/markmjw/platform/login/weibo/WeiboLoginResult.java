@@ -23,7 +23,7 @@ import android.os.Parcelable;
  * The weibo authorize result entity.
  *
  * @author markmjw
- * @date 2015-04-07
+ * @since 2015-04-07
  */
 class WeiboLoginResult implements Parcelable {
     String uid;

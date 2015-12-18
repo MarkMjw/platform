@@ -20,7 +20,7 @@ package cn.markmjw.platform;
  * Platform config.
  *
  * @author markmjw
- * @date 2015-08-15
+ * @since 2015-08-15
  */
 public class PlatformConfig {
     private static PlatformConfig mInstance;

@@ -34,7 +34,7 @@ import cn.markmjw.platform.util.GsonUtil;
  * QQ login handler.
  *
  * @author markmjw
- * @date 2015-04-07
+ * @since 2015-04-07
  */
 public class QQLoginHandler extends BaseLoginHandler {
     private QQHelper mManager;

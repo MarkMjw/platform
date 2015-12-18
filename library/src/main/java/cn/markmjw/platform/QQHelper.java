@@ -34,7 +34,7 @@ import java.util.ArrayList;
  * QQ helper.
  *
  * @author markmjw
- * @date 2015-03-02
+ * @since 2015-03-02
  */
 public class QQHelper {
     public static final String TAG = "QQHelper";

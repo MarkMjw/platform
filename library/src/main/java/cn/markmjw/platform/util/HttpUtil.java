@@ -30,7 +30,7 @@ import java.util.concurrent.TimeUnit;
  * A http request util with okhttp.
  *
  * @author markmjw
- * @date 2015-08-19
+ * @since 2015-08-19
  */
 public class HttpUtil {
     private static final OkHttpClient mOkHttpClient = new OkHttpClient();

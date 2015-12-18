@@ -41,7 +41,7 @@ import cn.markmjw.platform.util.HttpUtil;
  * Weibo login handler.
  *
  * @author markmjw
- * @date 2015-04-21
+ * @since 2015-04-21
  */
 public class WechatLoginHandler extends BaseLoginHandler {
     /** Get token url. */
