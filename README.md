@@ -72,7 +72,7 @@ handler.login(activity, new LoginListener());
 
 * Share with Weibo
 ```java
-WeiboHelper.getInstance(context).sendMessage(context, "text", “imagePath”);
+WeiboHelper.getInstance(context).sendMessage(context, "text", "imagePath");
 ```
 
 * Share with Wechat
@@ -89,7 +89,7 @@ WechatHelper.getInstance(context).sendTimeLine("title", "description", "shareUrl
 QQHelper.getInstance(context).shareToQQWithNetworkImage(activity, "title", "description", "shareUrl", "imageUrl");
 
 // share to qzone
-QQHelper.getInstance(context).shareToQzoneWithNetWorkImages(activity, "title", “description()”, “shareUrl", images);
+QQHelper.getInstance(context).shareToQzoneWithNetWorkImages(activity, "title", "description", "shareUrl", images);
 ```
 
 
