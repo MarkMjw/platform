@@ -30,7 +30,7 @@ PlatformConfig.getInstance()
 
 ####Login
 
-* login with Weibo
+* Login with Weibo
 ```java
 WeiboLoginHandler handler = new WeiboLoginHandler();
 handler.setLogEnable(true);
@@ -45,7 +45,7 @@ activity.setLifecycleListener(new ILifecycleListener() {
 handler.login(activity, new LoginListener());
 ```
 
-* login with Wechat
+* Login with Wechat
 ```java
 WechatLoginHandler handler = new WechatLoginHandler();
 handler.setLogEnable(true);
@@ -53,7 +53,7 @@ handler.setRequestUserInfo(true);
 handler.login(new LoginListener());
 ```
 
-* login with QQ
+* Login with QQ
 ```java
 QQLoginHandler handler = new QQLoginHandler();
 handler.setLogEnable(true);
@@ -70,11 +70,30 @@ handler.login(activity, new LoginListener());
 
 ####Share
 
-* share with Weibo
-* share with Wechat
-* share with QQ
+* Share with Weibo
+```java
+WeiboHelper.getInstance(context).sendMessage(context, "text", “imagePath”);
+```
 
-See more details on the [Wiki](https://github.com/openproject/LessCode/wiki)
+* Share with Wechat
+```java
+// share to friend
+WechatHelper.getInstance(context).sendFriend("title", "description", "shareUrl", thumbnail);
+
+// share to timeline
+WechatHelper.getInstance(context).sendTimeLine("title", "description", "shareUrl", thumbnail);
+```
+* Share with QQ
+```java
+// share to qq friend
+QQHelper.getInstance(context).shareToQQWithNetworkImage(activity, "title", "description", "shareUrl", "imageUrl");
+
+// share to qzone
+QQHelper.getInstance(context).shareToQzoneWithNetWorkImages(activity, "title", “description()”, “shareUrl", images);
+```
+
+
+See more details on the [sample](https://github.com/MarkMjw/platform/blob/master/sample%2Fsrc%2Fmain%2Fjava%2Fcn%2Fmarkmjw%2Fplatform%2Fdemo%2FMainActivity.java)
 
 License
 -------
