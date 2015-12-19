@@ -34,7 +34,7 @@ import cn.markmjw.platform.util.GsonUtil;
  * QQ login handler.
  *
  * @author markmjw
- * @since 2015-04-07
+ * @since 1.0.0
  */
 public class QQLoginHandler extends BaseLoginHandler {
     private QQHelper mManager;
@@ -45,15 +45,37 @@ public class QQLoginHandler extends BaseLoginHandler {
         mManager = QQHelper.getInstance(context);
     }
 
+    /**
+     * login
+     *
+     * @param activity activity
+     * @param listener callback listener
+     */
     public void login(Activity activity, ILoginListener listener) {
         setCallBack(listener);
         mManager.getTencent().login(activity, "all", mAuthListener);
     }
 
+    /**
+     * logout
+     *
+     * @param activity activity
+     */
     public void logout(Activity activity) {
         mManager.getTencent().logout(activity);
     }
 
+    /**
+     * should be called in {@link Activity#onActivityResult(int, int, Intent)}
+     *
+     * @param requestCode The integer request code originally supplied to
+     *                    startActivityForResult(), allowing you to identify who this
+     *                    result came from.
+     * @param resultCode  The integer result code returned by the child activity
+     *                    through its setResult().
+     * @param data        An Intent, which can return result data to the caller
+     *                    (various data can be attached to Intent "extras").
+     */
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         mManager.getTencent().onActivityResult(requestCode, resultCode, data);
     }

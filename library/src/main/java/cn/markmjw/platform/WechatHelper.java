@@ -34,7 +34,7 @@ import cn.markmjw.platform.util.ImageUtil;
  * Wechat helper.
  *
  * @author markmjw
- * @since 2014-09-28
+ * @since 1.0.0
  */
 public class WechatHelper {
     public static final int TYPE_WECHAT_FRIEND = 0;
@@ -66,7 +66,7 @@ public class WechatHelper {
     /**
      * 微信是否已安装
      *
-     * @return
+     * @return is installed
      */
     public boolean isInstalled() {
         return mApi.isWXAppInstalled();
@@ -75,7 +75,7 @@ public class WechatHelper {
     /**
      * 是否支持发送朋友圈
      *
-     * @return
+     * @return is supported
      */
     public boolean isSupported() {
         return mApi.isWXAppSupportAPI();
@@ -84,7 +84,7 @@ public class WechatHelper {
     /**
      * 是否支持发送朋友圈
      *
-     * @return
+     * @return is supported
      */
     public boolean isSupportedTimeline() {
         return mApi.getWXAppSupportAPI() >= MIN_SUPPORTED_VERSION;
@@ -93,8 +93,8 @@ public class WechatHelper {
     /**
      * 处理分享结果
      *
-     * @param intent
-     * @param handler
+     * @param intent  {@link Intent}
+     * @param handler IWXAPIEventHandler
      */
     public void handleResponse(Intent intent, IWXAPIEventHandler handler) {
         mApi.handleIntent(intent, handler);
@@ -103,7 +103,7 @@ public class WechatHelper {
     /**
      * 获取微信API
      *
-     * @return
+     * @return IWXAPI
      */
     public IWXAPI getAPI() {
         return mApi;
@@ -112,10 +112,10 @@ public class WechatHelper {
     /**
      * 分享给微信朋友
      *
-     * @param title
-     * @param des
-     * @param url
-     * @param image
+     * @param title 标题
+     * @param des   描述信息
+     * @param url   分享的链接
+     * @param image 图片
      */
     public void sendFriend(String title, String des, String url, Bitmap image) {
         WXWebpageObject page = new WXWebpageObject();
@@ -140,10 +140,10 @@ public class WechatHelper {
     /**
      * 分享给微信朋友
      *
-     * @param title
-     * @param des
-     * @param url
-     * @param image
+     * @param title 标题
+     * @param des   描述信息
+     * @param url   分享链接
+     * @param image 图片
      */
     public void sendFriend(String title, String des, String url, byte[] image) {
         WXWebpageObject page = new WXWebpageObject();
@@ -168,8 +168,8 @@ public class WechatHelper {
     /**
      * 分享给微信朋友
      *
-     * @param filePath
-     * @param image
+     * @param filePath 文件路径
+     * @param image    图片
      */
     public void sendFriend(String filePath, byte[] image) {
         WXImageObject imgObj = new WXImageObject();
@@ -192,8 +192,8 @@ public class WechatHelper {
     /**
      * 分享给微信朋友
      *
-     * @param filePath
-     * @param image
+     * @param filePath 文件路径
+     * @param image    图片
      */
     public void sendTimeLine(String filePath, byte[] image) {
         WXImageObject imgObj = new WXImageObject();
@@ -216,10 +216,10 @@ public class WechatHelper {
     /**
      * 分享到微信朋友圈
      *
-     * @param title
-     * @param des
-     * @param url
-     * @param image
+     * @param title 标题
+     * @param des   描述信息
+     * @param url   分享链接
+     * @param image 图片
      */
     public void sendTimeLine(String title, String des, String url, Bitmap image) {
         WXWebpageObject page = new WXWebpageObject();
@@ -244,10 +244,10 @@ public class WechatHelper {
     /**
      * 分享到微信朋友圈
      *
-     * @param title
-     * @param des
-     * @param url
-     * @param image
+     * @param title 标题
+     * @param des   描述信息
+     * @param url   分享的链接
+     * @param image 图片
      */
     public void sendTimeLine(String title, String des, String url, byte[] image) {
         WXWebpageObject page = new WXWebpageObject();
@@ -272,8 +272,8 @@ public class WechatHelper {
     /**
      * 根据微信的要求缩放缩略图
      *
-     * @param bitmap
-     * @return
+     * @param bitmap 图片
+     * @return 图片
      */
     public Bitmap zoomOut(Bitmap bitmap) {
         Bitmap dstBitmap = null;

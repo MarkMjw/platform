@@ -20,7 +20,7 @@ package cn.markmjw.platform;
  * Platform config.
  *
  * @author markmjw
- * @since 2015-08-15
+ * @since 1.0.0
  */
 public class PlatformConfig {
     private static PlatformConfig mInstance;
@@ -51,8 +51,11 @@ public class PlatformConfig {
     /**
      * init weibo config
      *
-     * @param key
-     * @param secret
+     * @param key      app key
+     * @param secret   app secret
+     * @param callback the callback url
+     * @param scope    the scope
+     * @return this object
      */
     public PlatformConfig initWeibo(String key, String secret, String callback, String scope) {
         mWeiboKey = key;
@@ -65,10 +68,11 @@ public class PlatformConfig {
     /**
      * init wechat config
      *
-     * @param key
-     * @param secret
-     * @param scope
-     * @param state
+     * @param key    app key
+     * @param secret app secret
+     * @param scope  scope
+     * @param state  state
+     * @return this object
      */
     public PlatformConfig initWechat(String key, String secret, String scope, String state) {
         mWechatId = key;
@@ -81,7 +85,9 @@ public class PlatformConfig {
     /**
      * init QQ config
      *
-     * @param key
+     * @param key    app key
+     * @param secret app secret
+     * @return this object
      */
     public PlatformConfig initQQ(String key, String secret) {
         mQQId = key;

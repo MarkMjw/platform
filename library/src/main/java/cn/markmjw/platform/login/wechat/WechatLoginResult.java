@@ -23,7 +23,7 @@ import android.os.Parcelable;
  * The wechat authorize result entity.
  *
  * @author markmjw
- * @since 2015-04-21
+ * @since 1.0.0
  */
 class WechatLoginResult implements Parcelable {
     String accessToken;
@@ -65,7 +65,8 @@ class WechatLoginResult implements Parcelable {
 
     public static final Parcelable.Creator<WechatLoginResult> CREATOR = new Parcelable
             .Creator<WechatLoginResult>() {
-        public WechatLoginResult createFromParcel(Parcel source) {return new WechatLoginResult(source);}
+        public WechatLoginResult createFromParcel(Parcel source) {return new WechatLoginResult
+                (source);}
 
         public WechatLoginResult[] newArray(int size) {return new WechatLoginResult[size];}
     };

@@ -23,7 +23,7 @@ import android.os.Parcelable;
  * The qq authorize result entity.
  *
  * @author markmjw
- * @since 2015-04-07
+ * @since 1.0.0
  */
 class QQLoginResult implements Parcelable {
     int ret;
@@ -72,7 +72,8 @@ class QQLoginResult implements Parcelable {
         this.authority_cost = in.readLong();
     }
 
-    public static final Parcelable.Creator<QQLoginResult> CREATOR = new Parcelable.Creator<QQLoginResult>() {
+    public static final Parcelable.Creator<QQLoginResult> CREATOR = new Parcelable
+            .Creator<QQLoginResult>() {
         public QQLoginResult createFromParcel(Parcel source) {return new QQLoginResult(source);}
 
         public QQLoginResult[] newArray(int size) {return new QQLoginResult[size];}

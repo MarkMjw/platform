@@ -23,7 +23,7 @@ import android.os.Parcelable;
  * The weibo user entity.
  *
  * @author markmjw
- * @since 2014-04-07
+ * @since 1.0.0
  */
 public class WeiboUserInfo implements Parcelable {
     public long id;

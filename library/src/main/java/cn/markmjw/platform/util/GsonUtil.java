@@ -31,7 +31,7 @@ import java.util.Date;
  * Gson util.
  *
  * @author markmjw
- * @since 2015-08-16
+ * @since 1.0.0
  */
 public final class GsonUtil {
     private static Gson gson;
@@ -39,23 +39,60 @@ public final class GsonUtil {
     public GsonUtil() {
     }
 
+    /**
+     * parse json string with {@link Type}
+     *
+     * @param json json string
+     * @param type the class type
+     * @param <T>  the type
+     * @return the type
+     */
     public static <T> T fromJson(String json, Type type) {
         return gson.fromJson(json, type);
     }
 
+    /**
+     * parse json string with {@link Class}
+     *
+     * @param json  json string
+     * @param clazz the class type
+     * @param <T>   the class type
+     * @return the class object
+     */
     public static <T> T fromJson(String json, Class<T> clazz) {
         return gson.fromJson(json, clazz);
     }
 
+    /**
+     * parse from json {@link Reader}
+     *
+     * @param json  the Reader
+     * @param clazz the class type
+     * @param <T>   the class type
+     * @return the class object
+     */
     public static <T> T fromJson(Reader json, Class<T> clazz) {
         return gson.fromJson(json, clazz);
     }
 
-
+    /**
+     * parse from json byte[]
+     *
+     * @param bytes the Reader
+     * @param clazz the class type
+     * @param <T>   the class type
+     * @return the class object
+     */
     public static <T> T fromJson(byte[] bytes, Class<T> clazz) {
         return gson.fromJson(new String(bytes), clazz);
     }
 
+    /**
+     * convert object to json string
+     *
+     * @param src the object
+     * @return json string
+     */
     public static String toJson(Object src) {
         return gson.toJson(src);
     }

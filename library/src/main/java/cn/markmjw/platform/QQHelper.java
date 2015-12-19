@@ -33,7 +33,7 @@ import java.util.ArrayList;
 /**
  * QQ helper.
  *
- * @author markmjw
+ * @author 1.0.0
  * @since 2015-03-02
  */
 public class QQHelper {
@@ -61,7 +61,8 @@ public class QQHelper {
     /**
      * 是否安装QQ客户端
      *
-     * @return
+     * @param context the context
+     * @return is installed
      */
     public static boolean isInstalled(Context context) {
         return SystemUtils.checkMobileQQ(context);
@@ -70,7 +71,7 @@ public class QQHelper {
     /**
      * 获取QQ API
      *
-     * @return
+     * @return Tencent api object
      */
     public Tencent getTencent() {
         return mTencent;
@@ -79,7 +80,7 @@ public class QQHelper {
     /**
      * 分享到qq好友(本地图片，注：如果没有安装qq客户端，有问题，坑啊)
      *
-     * @param activity
+     * @param activity  activity
      * @param title     标题
      * @param summary   分享内容、摘要
      * @param targetUrl 点击跳转的url
@@ -99,7 +100,7 @@ public class QQHelper {
     /**
      * 分享到qq好友（网络图片）
      *
-     * @param activity
+     * @param activity  activity
      * @param title     标题
      * @param summary   分享内容、摘要
      * @param targetUrl 点击跳转的url
@@ -119,8 +120,8 @@ public class QQHelper {
     /**
      * 分享本地图片到QQ
      *
-     * @param activity
-     * @param imageUrl
+     * @param activity activity
+     * @param imageUrl 图片URL
      */
     public void shareToQQWithImage(Activity activity, String imageUrl) {
         final Bundle params = new Bundle();
@@ -133,7 +134,7 @@ public class QQHelper {
      * 分享到qq空间（本地图文模式，注：有问题，坑啊，如果安装了qq客户端，分享不了；如果没有安装qq客户端，分享看不到图片）
      * QzoneShare.SHARE_TO_QQ_IMAGE_LOCAL_URL已废弃，分享本地图片统一使用QzoneShare.SHARE_TO_QQ_IMAGE_URL
      *
-     * @param activity
+     * @param activity   activity
      * @param title      标题
      * @param summary    内容、摘要
      * @param targetUrl  跳转url
@@ -148,7 +149,7 @@ public class QQHelper {
     /**
      * 分享到qq空间
      *
-     * @param activity
+     * @param activity   activity
      * @param shareType  分享类型（本地图文、本地图片等，注：如果没有安装qq客户端，有问题，坑啊）
      * @param title      标题
      * @param summary    内容、摘要
@@ -172,7 +173,7 @@ public class QQHelper {
     /**
      * 分享到qq空间（图文模式）
      *
-     * @param activity
+     * @param activity  activity
      * @param title     标题
      * @param summary   内容、摘要
      * @param targetUrl 跳转url
@@ -187,7 +188,7 @@ public class QQHelper {
     /**
      * 分享到qq空间
      *
-     * @param activity
+     * @param activity  activity
      * @param shareType 分享类型（图文、图等）
      * @param title     标题
      * @param summary   内容、摘要

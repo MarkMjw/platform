@@ -29,7 +29,7 @@ import java.io.File;
  * Image util.
  *
  * @author markmjw
- * @since 2015-08-16
+ * @since 1.0.0
  */
 public class ImageUtil {
     private static final String TAG = "ImageUtil";
@@ -37,9 +37,9 @@ public class ImageUtil {
     /**
      * Convert Bitmap to byte[]
      *
-     * @param bitmap
-     * @param needRecycle
-     * @return
+     * @param bitmap      the source bitmap
+     * @param needRecycle need recycle
+     * @return byte[]
      */
     public static byte[] bitmapToBytes(Bitmap bitmap, boolean needRecycle) {
         ByteArrayOutputStream output = new ByteArrayOutputStream();
@@ -59,9 +59,10 @@ public class ImageUtil {
     /**
      * Scale bitmap with width and height.
      *
-     * @param bitmap
-     * @param w
-     * @param h
+     * @param bitmap the source bitmap
+     * @param w      the width
+     * @param h      the height
+     * @return the bitmap
      */
     public static Bitmap zoom(Bitmap bitmap, int w, int h) {
         if (null == bitmap) {
@@ -89,8 +90,8 @@ public class ImageUtil {
     /**
      * Get bitmap from file with the path.
      *
-     * @param path
-     * @return
+     * @param path the file path
+     * @return the bitmap
      */
     public static Bitmap getBitmapFromFile(String path) {
         Bitmap bitmap = null;

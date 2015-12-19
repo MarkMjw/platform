@@ -23,7 +23,7 @@ import android.os.Parcelable;
  * The qq user entity.
  *
  * @author markmjw
- * @since 2015-08-16
+ * @since 1.0.0
  */
 public class QQUserInfo implements Parcelable {
     public String is_yellow_year_vip;
@@ -90,7 +90,8 @@ public class QQUserInfo implements Parcelable {
         this.figureurl = in.readString();
     }
 
-    public static final Parcelable.Creator<QQUserInfo> CREATOR = new Parcelable.Creator<QQUserInfo>() {
+    public static final Parcelable.Creator<QQUserInfo> CREATOR = new Parcelable
+            .Creator<QQUserInfo>() {
         public QQUserInfo createFromParcel(Parcel source) {return new QQUserInfo(source);}
 
         public QQUserInfo[] newArray(int size) {return new QQUserInfo[size];}

@@ -41,7 +41,7 @@ import cn.markmjw.platform.util.HttpUtil;
  * Weibo login handler.
  *
  * @author markmjw
- * @since 2015-04-21
+ * @since 1.0.0
  */
 public class WechatLoginHandler extends BaseLoginHandler {
     /** Get token url. */
@@ -55,6 +55,11 @@ public class WechatLoginHandler extends BaseLoginHandler {
         mManager = WechatHelper.getInstance(context);
     }
 
+    /**
+     * login
+     *
+     * @param listener callback listener
+     */
     public void login(ILoginListener listener) {
         setCallBack(listener);
         SendAuth.Req request = new SendAuth.Req();
@@ -63,6 +68,11 @@ public class WechatLoginHandler extends BaseLoginHandler {
         mManager.getAPI().sendReq(request);
     }
 
+    /**
+     * handle response from wechat.
+     *
+     * @param response the response
+     */
     public void handleResponse(SendAuth.Resp response) {
         switch (response.errCode) {
             case BaseResp.ErrCode.ERR_OK:
@@ -85,6 +95,11 @@ public class WechatLoginHandler extends BaseLoginHandler {
         }
     }
 
+    /**
+     * request token from wechat server.
+     *
+     * @param code the auth code
+     */
     private void requestToken(String code) {
         Map<String, String> params = new HashMap<>();
         params.put("appid", PlatformConfig.getInstance().getWechatId());
@@ -130,6 +145,12 @@ public class WechatLoginHandler extends BaseLoginHandler {
         });
     }
 
+    /**
+     * request user information.
+     *
+     * @param openId      the app id
+     * @param accessToken the access token
+     */
     private void requestUserInfo(String openId, String accessToken) {
         Map<String, String> params = new HashMap<>();
         params.put("access_token", accessToken);

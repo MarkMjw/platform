@@ -43,7 +43,7 @@ import cn.markmjw.platform.util.HttpUtil;
  * Weibo login handler.
  *
  * @author markmjw
- * @since 2014-03-27
+ * @since 1.0.0
  */
 public class WeiboLoginHandler extends BaseLoginHandler {
     /** weibo api. */
@@ -55,6 +55,12 @@ public class WeiboLoginHandler extends BaseLoginHandler {
 
     }
 
+    /**
+     * login
+     *
+     * @param activity the activity
+     * @param listener callback listener
+     */
     public void login(Activity activity, ILoginListener listener) {
         setCallBack(listener);
         PlatformConfig config = PlatformConfig.getInstance();
@@ -65,12 +71,28 @@ public class WeiboLoginHandler extends BaseLoginHandler {
         mSsoHandler.authorize(mAuthListener);
     }
 
+    /**
+     * should be called in {@link Activity#onActivityResult(int, int, Intent)}
+     *
+     * @param requestCode The integer request code originally supplied to
+     *                    startActivityForResult(), allowing you to identify who this
+     *                    result came from.
+     * @param resultCode  The integer result code returned by the child activity
+     *                    through its setResult().
+     * @param data        An Intent, which can return result data to the caller
+     *                    (various data can be attached to Intent "extras").
+     */
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (null != mSsoHandler) {
             mSsoHandler.authorizeCallBack(requestCode, resultCode, data);
         }
     }
 
+    /**
+     * request user information.
+     *
+     * @param result the login result.
+     */
     private void requestUserInfo(final WeiboLoginResult result) {
         Map<String, String> params = new HashMap<>();
         params.put("uid", result.uid);

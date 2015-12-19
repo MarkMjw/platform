@@ -20,7 +20,7 @@ package cn.markmjw.platform.login;
  * The login status listener.
  *
  * @author markmjw
- * @since 2015-04-07
+ * @since 1.0.0
  */
 public interface ILoginListener {
     /** Success. */
@@ -41,8 +41,8 @@ public interface ILoginListener {
     /**
      * login callback
      *
-     * @param code
-     * @param data
+     * @param code login status code
+     * @param data the login data
      */
     void loginStatus(int code, Object data);
 }

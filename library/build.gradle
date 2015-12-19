@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.jfrog.bintray'
 apply plugin: 'com.github.dcendents.android-maven'
 
-version = "1.0.0"
+version = "1.1.0"
 
 android {
     compileSdkVersion 23
@@ -33,6 +33,7 @@ dependencies {
 
 def siteUrl = 'https://github.com/MarkMjw/platform'
 def gitUrl = 'https://github.com/MarkMjw/platform.git'
+def issueUrl = 'https://github.com/MarkMjw/platform/issues'
 
 group = "cn.markmjw"
 
@@ -98,6 +99,7 @@ bintray {
         name = "platform" // #CONFIG# project name in jcenter
         websiteUrl = siteUrl
         vcsUrl = gitUrl
+        issueTrackerUrl = issueUrl
         licenses = ["Apache-2.0"]
         publish = true
     }

@@ -38,7 +38,7 @@ import cn.markmjw.platform.util.ImageUtil;
  * Weibo helper.
  *
  * @author markmjw
- * @since 2015-03-05
+ * @since 1.0.0
  */
 public class WeiboHelper {
     private static WeiboHelper sInstance;
@@ -52,11 +52,6 @@ public class WeiboHelper {
         mWeiboShareAPI.registerApp();
     }
 
-    /**
-     * 获取实例
-     *
-     * @return
-     */
     public synchronized static WeiboHelper getInstance(Context context) {
         if (sInstance == null) {
             sInstance = new WeiboHelper(context);
@@ -65,9 +60,9 @@ public class WeiboHelper {
     }
 
     /**
-     * 是否支持此API
+     * 是否安装微博APP
      *
-     * @return
+     * @return is installed
      */
     public boolean isInstalled() {
         return mWeiboShareAPI.isWeiboAppInstalled();
@@ -76,8 +71,8 @@ public class WeiboHelper {
     /**
      * 处理分享结果
      *
-     * @param intent
-     * @param response
+     * @param intent   {@link Intent}
+     * @param response IWeiboHandler.Response
      */
     public void handleResponse(Intent intent, IWeiboHandler.Response response) {
         mWeiboShareAPI.handleWeiboResponse(intent, response);
@@ -86,7 +81,7 @@ public class WeiboHelper {
     /**
      * 第三方应用发送请求消息到微博，唤起微博分享界面。
      *
-     * @param activity
+     * @param activity  activity
      * @param text      文本
      * @param imagePath 图片
      */
@@ -113,11 +108,11 @@ public class WeiboHelper {
     /**
      * 第三方应用发送请求消息到微博，唤起微博分享界面。
      *
-     * @param activity
-     * @param title
-     * @param des
-     * @param url
-     * @param thumbnail
+     * @param activity  activity
+     * @param title     标题
+     * @param des       描述信息
+     * @param url       分享的链接
+     * @param thumbnail 缩略图
      */
     private void sendWebMessage(Activity activity, String title, String des, String url, Bitmap
             thumbnail) {
@@ -138,7 +133,7 @@ public class WeiboHelper {
     /**
      * 创建文本消息对象
      *
-     * @param content
+     * @param content 文本内容
      * @return 文本消息对象
      */
     private TextObject getTextObject(String content) {
@@ -150,7 +145,7 @@ public class WeiboHelper {
     /**
      * 创建图片消息对象
      *
-     * @param imagePath
+     * @param imagePath 图片路径
      * @return 图片消息对象
      */
     private ImageObject getImageObject(String imagePath) {
@@ -165,11 +160,11 @@ public class WeiboHelper {
     /**
      * 创建多媒体（网页）消息对象
      *
-     * @param title
-     * @param des
-     * @param url
-     * @param thumbnail
-     * @return
+     * @param title     标题
+     * @param des       描述信息
+     * @param url       分享的链接
+     * @param thumbnail 缩略图
+     * @return 网页消息对象
      */
     private WebpageObject getWebPageObject(String title, String des, String url, Bitmap thumbnail) {
         WebpageObject web = new WebpageObject();

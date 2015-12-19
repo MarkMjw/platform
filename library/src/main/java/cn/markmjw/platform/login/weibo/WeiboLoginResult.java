@@ -23,7 +23,7 @@ import android.os.Parcelable;
  * The weibo authorize result entity.
  *
  * @author markmjw
- * @since 2015-04-07
+ * @since 1.0.0
  */
 class WeiboLoginResult implements Parcelable {
     String uid;
@@ -59,7 +59,8 @@ class WeiboLoginResult implements Parcelable {
 
     public static final Parcelable.Creator<WeiboLoginResult> CREATOR = new Parcelable
             .Creator<WeiboLoginResult>() {
-        public WeiboLoginResult createFromParcel(Parcel source) {return new WeiboLoginResult(source);}
+        public WeiboLoginResult createFromParcel(Parcel source) {return new WeiboLoginResult
+                (source);}
 
         public WeiboLoginResult[] newArray(int size) {return new WeiboLoginResult[size];}
     };

@@ -30,7 +30,7 @@ import java.util.concurrent.TimeUnit;
  * A http request util with okhttp.
  *
  * @author markmjw
- * @since 2015-08-19
+ * @since 1.0.0
  */
 public class HttpUtil {
     private static final OkHttpClient mOkHttpClient = new OkHttpClient();
@@ -43,8 +43,8 @@ public class HttpUtil {
     /**
      * Request async.
      *
-     * @param request
-     * @param callback
+     * @param request  the request object
+     * @param callback the callback
      */
     public static void enqueue(Request request, Callback callback) {
         mOkHttpClient.newCall(request).enqueue(callback);
@@ -53,8 +53,8 @@ public class HttpUtil {
     /**
      * encode param with UTF-8
      *
-     * @param params
-     * @return
+     * @param params the params
+     * @return the encode string
      */
     public static String encodeParams(Map<String, String> params) {
         StringBuilder encodedParams = new StringBuilder();
@@ -80,9 +80,9 @@ public class HttpUtil {
     /**
      * Build url with params, which can auto encode params.
      *
-     * @param url
-     * @param params
-     * @return
+     * @param url    the source url
+     * @param params the request params
+     * @return the url
      */
     public static String buildUrl(String url, Map<String, String> params) {
         String urlStr = url;
