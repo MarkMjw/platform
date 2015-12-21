@@ -14,7 +14,7 @@ Features
 Gradle
 ------
 ```groovy
-compile 'cn.markmjw:third-platform-login:1.1.0'
+compile 'cn.markmjw:library:1.0.0'
 ```
 
 Usage
