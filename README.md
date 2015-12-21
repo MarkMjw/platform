@@ -2,12 +2,14 @@ platform
 ================================
 An Android library login and share with third party such as Weibo,Wechat and QQ.
 
-> Author weibo：<a href="http://weibo.com/markmjw" target="_blank">MarkMjw</a>
+> Weibo：<a href="http://weibo.com/markmjw" target="_blank">MarkMjw</a><br>
+> Email：xiangmao6@hotmail.com
 
 Features
 ------
 * support Weibo, Wechat, QQ login and share
 * request by [okhttp](https://github.com/square/okhttp)
+* parse json string with [Gson](https://github.com/google/gson)
 * easy integration
 * open source
 
