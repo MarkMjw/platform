@@ -17,6 +17,10 @@ Gradle
 compile 'cn.markmjw:third-platform-login:1.1.0'
 ```
 
+Screenshot
+-------
+![Screenshot 0](https://raw.github.com/MarkMjw/platform/master/art/device-2015-12-18-215826.png)
+
 Usage
 -------
 ####Config
