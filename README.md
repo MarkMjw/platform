@@ -1,5 +1,6 @@
 platform
 ================================
+[![API](https://img.shields.io/badge/API-15%2B-green.svg)](https://github.com/MarkMjw/platform)
 An Android library login and share with third party such as Weibo,Wechat and QQ.
 
 > Weibo：<a href="http://weibo.com/markmjw" target="_blank">MarkMjw</a><br>
@@ -15,6 +16,9 @@ Features
 
 Gradle
 ------
+Add into your **build.gradle**
+
+[![Download](https://api.bintray.com/packages/markmjw/maven/platform/images/download.svg)](https://bintray.com/markmjw/maven/platform/_latestVersion)
 ```groovy
 compile 'cn.markmjw:library:1.2.0'
 ```
