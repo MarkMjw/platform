@@ -1,6 +1,7 @@
 platform
 ================================
 [![API](https://img.shields.io/badge/API-15%2B-green.svg)](https://github.com/MarkMjw/platform)
+
 An Android library login and share with third party such as Weibo,Wechat and QQ.
 
 > Weibo：<a href="http://weibo.com/markmjw" target="_blank">MarkMjw</a><br>
