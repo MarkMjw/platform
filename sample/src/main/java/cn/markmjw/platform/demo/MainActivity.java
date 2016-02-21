@@ -59,10 +59,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
+        // TODO change the value with your config
         PlatformConfig.getInstance()
                 .initWeibo("WEIBO.KEY", "WEIBO.SECRET", "WEIBO.CALLBACK", "")
-                .initWechat("WECHAT.KEY", "WECHAT.SECRET", "WECHAT.SCOPE", "WECHAT.CALLBACK")
-                .initQQ("QQ.KEY", "QQ.SECRET");
+                .initWechat("WECHAT.APPID", "WECHAT.SECRET", "WECHAT.SCOPE", "WECHAT.STATE")
+                .initQQ("QQ.APPID", "QQ.SECRET");
     }
 
     @Override
